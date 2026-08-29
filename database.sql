@@ -42,7 +42,5 @@ CREATE TABLE tickets (
     FOREIGN KEY (schedule_id) REFERENCES schedules(id) ON DELETE CASCADE
 );
 
--- First login: admin@example.com / admin123
--- Change this password after the first login by editing the user in phpMyAdmin if needed.
 INSERT INTO users (name, email, password, role) VALUES
 ('System Admin', 'admin@example.com', 'admin123', 'admin');
