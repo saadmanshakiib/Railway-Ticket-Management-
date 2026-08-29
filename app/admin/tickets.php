@@ -3,7 +3,6 @@ require_once '../includes/auth.php';
 require_role(['admin']);
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete'])) {
     check_csrf();
-    // Deleting a ticket acts like a cancellation and returns the booked seats.
     $pdo->beginTransaction();
     $ticket = $pdo->prepare("SELECT schedule_id,seats FROM tickets WHERE id=?");
     $ticket->execute([$_POST['delete']]);
