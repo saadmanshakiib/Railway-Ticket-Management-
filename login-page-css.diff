@@ -1,0 +1,51 @@
+--- app/auth/login.php
++++ app/auth/login.php
+@@
+-<html><head><link rel="stylesheet" href="../assets/style.css"></head>
++<html><head><link rel="stylesheet" href="../login.css"></head>
+ <body class="auth-body login-body">
+ <div class="auth-box login-box">
+
+--- /dev/null
++++ app/login.css
+@@
++* {
++    box-sizing: border-box;
++    margin: 0;
++    padding: 0;
++    font-family: Arial, sans-serif;
++}
++
++body {
++    background: #f4f6f8;
++    color: #333;
++}
++
++.auth-body {
++    display: flex;
++    justify-content: center;
++    align-items: center;
++    min-height: 100vh;
++    padding: 20px;
++}
++
++.login-body:before {
++    content: "";
++    position: fixed;
++    top: 0;
++    left: 0;
++    right: 0;
++    height: 130px;
++    background: #1e3a8a;
++    z-index: -1;
++}
++
++.auth-box {
++    background: white;
++    padding: 40px;
++    width: 390px;
++    border-radius: 8px;
++    border-top: 6px solid #1e3a8a;
++    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
++    text-align: left;
++}
