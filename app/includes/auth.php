@@ -4,7 +4,6 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once __DIR__ . '/../Config/db.php';
 
-// Change this one value if the project folder is renamed.
 define('BASE_URL', '/TicketRailway/app');
 
 function require_login() {
@@ -16,7 +15,6 @@ function require_login() {
 
 function require_role($allowed) {
     require_login();
-    // An administrator is allowed to use every section of the system.
     if ($_SESSION['role'] !== 'admin' && !in_array($_SESSION['role'], $allowed)) {
         die('Access denied.');
     }
