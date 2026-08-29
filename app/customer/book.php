@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $total = $seats * $schedule['price'];
         try {
             $pdo->beginTransaction();
-            // The condition makes sure seats cannot become negative if two people book together.
             $update = $pdo->prepare("UPDATE schedules SET available_seats = available_seats - ? WHERE id = ? AND available_seats >= ?");
             $update->execute([$seats, $schedule_id, $seats]);
             if ($update->rowCount() !== 1) {
