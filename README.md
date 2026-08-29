@@ -12,4 +12,4 @@ The admin can add managers, customers, trains, schedules, and view/delete ticket
 Managers can manage customers, trains, and schedules.
 Customers can register, log in, search trains by source, destination and date, and book available seats.
 
-If this folder is renamed, change `BASE_URL` in `app/includes/auth.php` to the new URL path.
+//If this folder is renamed, change `BASE_URL` in `app/includes/auth.php` to the new URL path.
